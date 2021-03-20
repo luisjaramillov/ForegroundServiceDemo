@@ -11,8 +11,8 @@ namespace ForegroundServiceDemo
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(ReportPositionPage), typeof(ReportPositionPage));
+            Routing.RegisterRoute(nameof(UploadPhotoPage), typeof(UploadPhotoPage));
         }
 
     }

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForegroundServiceDemo.Views.ReportPositionPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Margin="15">
+            <StackLayout Orientation="Horizontal" Margin="15">
+                <CheckBox IsChecked="{Binding IsChecked}"></CheckBox>
+                <Label Text="Reportar en tiempo real" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+            <Button Text="Iniciar" Command="{Binding IniciarCommand}"></Button>
+            <Button Text="Detener" Command="{Binding DetenerCommand}"></Button>
+            <BoxView HeightRequest="3" Margin="25"></BoxView>
+            <Button Text="Actualizar" Command="{Binding RefresCommand}"></Button>
+            <ListView ItemsSource="{Binding Items}" HasUnevenRows="True">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="FillAndExpand">
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Ubicacion: "></Span>
+                                            <Span Text="{Binding Location}" FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Evento: "></Span>
+                                            <Span Text="{Binding Event}" FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label FontAttributes="Italic">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Fecha: "></Span>
+                                            <Span Text="{Binding Date}" FontAttributes="Bold"></Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

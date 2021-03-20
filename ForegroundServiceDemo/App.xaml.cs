@@ -1,5 +1,4 @@
-﻿using ForegroundServiceDemo.Services;
-using ForegroundServiceDemo.Views;
+﻿using ForegroundServiceDemo.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,6 @@ namespace ForegroundServiceDemo
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
